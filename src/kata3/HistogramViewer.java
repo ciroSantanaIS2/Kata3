@@ -1,14 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kata3;
 
-/**
- *
- * @author Ciro
- */
-public class HistogramViewer {
+public class HistogramViewer<T> {
+    private Histogram<T> histogram;
+
+    public HistogramViewer(Histogram<T> histogram) {
+        this.histogram = histogram;
+    }
+    
+    public void show() {
+        for (T key : histogram.keySet()) {
+            System.out.println(key + ": " + histogram.get(key));
+        }
+    }
+    
+    
     
 }
